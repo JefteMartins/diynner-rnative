@@ -1,5 +1,5 @@
 import { TextInput, View } from "react-native";
-import { styles } from "../home/styles";
+import { styles } from "./styles";
 import SvgComponent from "./SvgComponent";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import TextInputExample from "./textInput";

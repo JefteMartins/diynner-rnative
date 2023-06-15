@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, TextInput} from 'react-native';
-import { styles } from '../home/styles';
+import { styles } from './styles';
 
 export default function TextInputExample () {
   const [text, onChangeText] = React.useState('Pesquisa por uma receita aí...');
