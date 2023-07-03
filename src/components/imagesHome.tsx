@@ -2,6 +2,9 @@ import { Text, View, Image, ImageBackground } from 'react-native';
 import { styles } from './styles'
 import { LinearGradient } from 'expo-linear-gradient';
 import { Gupter_400Regular, Gupter_500Medium } from '@expo-google-fonts/gupter';
+//json com as comidas
+import { listaDeComidas } from '../screens/home';
+
 
 export default function ImagesHome() {
   return (<View style={styles.homeGrid}>
@@ -28,29 +31,3 @@ export default function ImagesHome() {
   );
 };
 
-const listaDeComidas = [
-  {
-    nome: "Strogonoff de Frango",
-    image: "https://www.unileverfoodsolutions.com.br/dam/global-ufs/mcos/SLA/calcmenu/recipes/BR-recipes/chicken-&-other-poultry-dishes/strogonoff-de-frango/main-header.jpg"
-  },
-  {
-    nome: "Strogonoff de Frango",
-    image: "https://www.unileverfoodsolutions.com.br/dam/global-ufs/mcos/SLA/calcmenu/recipes/BR-recipes/chicken-&-other-poultry-dishes/strogonoff-de-frango/main-header.jpg"
-  },
-  {
-    nome: "Strogonoff de Frango",
-    image: "https://www.unileverfoodsolutions.com.br/dam/global-ufs/mcos/SLA/calcmenu/recipes/BR-recipes/chicken-&-other-poultry-dishes/strogonoff-de-frango/main-header.jpg"
-  },
-  {
-    nome: "Strogonoff de Frango",
-    image: "https://www.unileverfoodsolutions.com.br/dam/global-ufs/mcos/SLA/calcmenu/recipes/BR-recipes/chicken-&-other-poultry-dishes/strogonoff-de-frango/main-header.jpg"
-  },
-  {
-    nome: "Strogonoff de Frango",
-    image: "https://www.unileverfoodsolutions.com.br/dam/global-ufs/mcos/SLA/calcmenu/recipes/BR-recipes/chicken-&-other-poultry-dishes/strogonoff-de-frango/main-header.jpg"
-  },
-  {
-    nome: "Macarrão",
-    image: "https://fotografiamais.com.br/wp-content/uploads/2018/08/fotos-de-comida-inspiracao-como-tirar.jpg"
-  },
-]

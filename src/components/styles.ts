@@ -47,6 +47,10 @@ export const styles = StyleSheet.create({
     textStyle: {
       fontSize: 13,
       color: '#F4EDE3',
+    },
+    diynnerTitle:{
+      fontSize: 20,
+      fontWeight: '700',
     }
 });
   

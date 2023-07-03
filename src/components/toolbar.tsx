@@ -1,15 +1,18 @@
-import { TextInput, View } from "react-native";
+import { View, Text } from "react-native";
 import { styles } from "./styles";
-import SvgComponent from "./SvgComponent";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import TextInputExample from "./textInput";
-
+import { Gupter_400Regular, Gupter_500Medium } from '@expo-google-fonts/gupter';
 export default function Toolbar() {
     return (
         <>
         <View style={styles.toolbar}>
             <View style={styles.svgCss}>
-                <SvgComponent />
+                {/* <SvgComponent /> */}
+                <Text style={styles.diynnerTitle}>
+                    Diynner
+                </Text>
+
             </View>
             <View style={styles.svgCss}>
                 <Ionicons name="md-reader-outline" size={24} color="black" />
