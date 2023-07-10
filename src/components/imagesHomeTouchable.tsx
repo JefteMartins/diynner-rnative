@@ -4,7 +4,7 @@ import { styles } from './styles';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from '@react-navigation/native';
 import { listaDeComidas } from '../screens/home';
-import ImagesHome from './imagesHome';
+import { listaDeComidasFull } from '../assets/listaDeComidasFull';
 
 export default function ImagesTouchableHome() {
 
@@ -16,7 +16,7 @@ export default function ImagesTouchableHome() {
 
   return (
     <View style={styles.homeGrid}>
-      {listaDeComidas.map((comida, index) => {
+      {listaDeComidasFull.map((comida, index) => {
         return (
           <TouchableOpacity key={index} onPress={() => handlePress(comida)} >
             <ImageBackground
