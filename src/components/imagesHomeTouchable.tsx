@@ -4,14 +4,14 @@ import { styles } from './styles';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from '@react-navigation/native';
 import { listaDeComidas } from '../screens/home';
+import ImagesHome from './imagesHome';
 
 export default function ImagesTouchableHome() {
 
   const navigation = useNavigation();
 
-  const handlePress = (nome: Object) => {
-    navigation.navigate('ImagesHome');
-    console.log(nome);
+  const handlePress = (foodData: Object) => {
+    navigation.navigate('ImagesHome', foodData);
   };
 
   return (
@@ -34,6 +34,7 @@ export default function ImagesTouchableHome() {
           </TouchableOpacity>
         );
       })}
+      
     </View>
   );
 }

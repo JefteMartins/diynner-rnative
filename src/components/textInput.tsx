@@ -4,7 +4,6 @@ import { styles } from './styles';
 
 export default function TextInputExample () {
   const [text, onChangeText] = React.useState('');
-  const [number, onChangeNumber] = React.useState('');
 
   return (
     <SafeAreaView>
