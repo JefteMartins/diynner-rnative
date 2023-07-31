@@ -1,5 +1,6 @@
 import { View, Text, Image } from 'react-native';
 import { styles } from '../../components/styles';
+import React from 'react';
 
 export default function RecipeDetails(props: any) {
   const foodDetailsData = props.route.params;
