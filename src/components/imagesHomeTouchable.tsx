@@ -11,7 +11,7 @@ export default function ImagesTouchableHome() {
   const navigation = useNavigation();
 
   const handlePress = (foodData: Object) => {
-    navigation.navigate('ImagesHome', foodData);
+    navigation.navigate('RecipeDetails', foodData);
   };
 
   return (

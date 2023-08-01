@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import { styles } from '../../components/styles';
 import Toolbar from '../../components/toolbar';
 import ImagesHomeTouchable from '../../components/imagesHomeTouchable';
+import React from 'react';
 
 export default function Home({ navigation }: any) {
   return (
