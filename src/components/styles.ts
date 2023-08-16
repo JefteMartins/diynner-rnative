@@ -6,6 +6,9 @@ export const styles = StyleSheet.create({
       backgroundColor: '#edf0eb',
       paddingTop: 44,
     },
+    textContainer: {
+      padding: 20,
+    },
     homeGrid: {
       flexDirection: "row",
       flexWrap: "wrap",
@@ -56,6 +59,12 @@ export const styles = StyleSheet.create({
     diynnerTitle:{
       fontSize: 20,
       fontWeight: '700',
+    },
+    horizontalRule:{
+      margin: 10,
+      width: "100%",
+      borderWidth: 0.5,
+      borderBottomWidth: 1,
     }
 });
   

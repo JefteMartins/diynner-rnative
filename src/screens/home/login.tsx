@@ -1,13 +1,15 @@
-import { View, Text, StyleSheet, TextInput, ActivityIndicator, Button, KeyboardAvoidingView } from 'react-native'
+import { View, StyleSheet, TextInput, ActivityIndicator, Button, KeyboardAvoidingView } from 'react-native'
 import React from 'react'
 import { FIREBASE_AUTH } from '../../../FirebaseConfig'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
 import { useNavigation } from '@react-navigation/native';
 
 const Login = () => {
+
   const [email, setEmail] = React.useState('')
   const [password, setPassword] = React.useState('')
   const [loading, setLoading] = React.useState(false)
+
   const auth = FIREBASE_AUTH
 
   const navigation = useNavigation();
@@ -26,45 +28,45 @@ const Login = () => {
       setLoading(false)
     }
   }
-    const signUp = async () => {
-      setLoading(true)
-      try {
-        const response = await createUserWithEmailAndPassword(auth, email, password)
-        console.log(response)
-        alert('Cadastrado com sucesso!')
-      } catch (e: any) {
-        console.log(e)
-        console.log("failed to create", e.message)
-      } finally {
-        setLoading(false)
-      }
+  const signUp = async () => {
+    setLoading(true)
+    try {
+      const response = await createUserWithEmailAndPassword(auth, email, password)
+      console.log(response)
+      alert('Cadastrado com sucesso!')
+    } catch (e: any) {
+      console.log(e)
+      console.log("failed to create", e.message)
+    } finally {
+      setLoading(false)
     }
+  }
 
   return (
     <View style={styles.container}>
       <KeyboardAvoidingView behavior="padding">
-      <TextInput style={styles.input}
-      value={email}
-      placeholder="Email"
-      onChangeText={setEmail}
-      autoCapitalize='none'  
-      />
-      <TextInput style={styles.input}
-      value={password}
-      placeholder="Senha"
-      onChangeText={setPassword}
-      autoCapitalize='none'
-      secureTextEntry
-      />
-      {
-        loading ? (<ActivityIndicator size="large" color="#0000ff" />) :
-         (
-          <>
-          <Button title="Entrar" onPress={signIn} />
-          <Button title="Cadastrar" onPress={signUp} />
-          </>
-         )
-      }
+        <TextInput style={styles.input}
+          value={email}
+          placeholder="Email"
+          onChangeText={setEmail}
+          autoCapitalize='none'
+        />
+        <TextInput style={styles.input}
+          value={password}
+          placeholder="Senha"
+          onChangeText={setPassword}
+          autoCapitalize='none'
+          secureTextEntry
+        />
+        {
+          loading ? (<ActivityIndicator size="large" color="#0000ff" />) :
+            (
+              <>
+                <Button title="Entrar" onPress={signIn} />
+                <Button title="Cadastrar" onPress={signUp} />
+              </>
+            )
+        }
       </KeyboardAvoidingView>
     </View>
   )
