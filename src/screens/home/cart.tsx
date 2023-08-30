@@ -12,13 +12,24 @@ const PaymentScreen = (props: any) => {
     });
     const handlePayment = () => {
         // Lógica de processamento de pagamento
-        navigation.navigate('Confirmation'); // Substitua 'Confirmation' pelo nome da tela de confirmação
+        navigation.navigate('Home'); // Substitua 'Confirmation' pelo nome da tela de confirmação
     };
 
     return (
         <View style={styles.container}>
             <Text style={styles.title}>{foodDetailsData.nome}</Text>
             <Text style={styles.ingredients}>ingredientes</Text>
+            <Text style={styles.ingredients}>
+                {
+                    foodIngredientsData.map(
+                        (foodIngredientsData: any, index: any) => {
+                            return (
+                                foodIngredientsData.item + " "
+                            )
+                        }
+                    )
+                }
+            </Text>
             <Text style={styles.price}>Valor: R$ {valor}</Text>
             <Button title="Confirmar Compra" onPress={handlePayment} />
         </View>
