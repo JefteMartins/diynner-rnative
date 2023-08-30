@@ -4,6 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Gupter_400Regular, Gupter_500Medium } from '@expo-google-fonts/gupter';
 //json com as comidas
 import { listaDeComidas } from '../screens/home';
+import React from 'react';
 
 
 export default function ImagesHome() {
