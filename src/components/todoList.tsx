@@ -1,6 +1,5 @@
 import { Box, Center, Checkbox, HStack, Heading, Icon, IconButton, Input, VStack, useToast, Text } from "native-base";
 import React from "react";
-import { Feather, Entypo } from "@expo/vector-icons";
 
 export default function PassoAPasso(props: any) {
     let instState = [{

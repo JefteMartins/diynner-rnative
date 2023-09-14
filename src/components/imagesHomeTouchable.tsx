@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet, View, ImageBackground, TouchableOpacity, SafeAreaView, TextInput } from 'react-native';
+import { Text, View, ImageBackground, TouchableOpacity, SafeAreaView, TextInput } from 'react-native';
 import { styles } from './styles';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from '@react-navigation/native';

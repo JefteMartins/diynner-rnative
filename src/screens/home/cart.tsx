@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React from 'react';
+import { View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Box, Button, Card, Divider, VStack } from 'native-base';
+import { Button } from 'native-base';
 import CardRecipe from '../../components/cardRecipe';
+import { styles } from '../stylesScreen';
 
 const PaymentScreen = (props: any) => {
     const navigation = useNavigation();
@@ -29,28 +30,5 @@ const PaymentScreen = (props: any) => {
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        padding: 20,
-        backgroundColor: '#EDF0EB',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-    },
-    title: {
-        fontSize: 20,
-        marginBottom: 10,
-        fontWeight: 'bold',
-    },
-    ingredients: {
-        marginBottom: 20,
-        textAlign: 'center',
-    },
-    price: {
-        fontSize: 18,
-        marginBottom: 20,
-    },
-});
 
 export default PaymentScreen;

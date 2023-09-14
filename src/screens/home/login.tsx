@@ -1,10 +1,10 @@
-import { View, StyleSheet, TextInput, ActivityIndicator, Button, KeyboardAvoidingView } from 'react-native'
+import { View, TextInput, ActivityIndicator, Button, KeyboardAvoidingView } from 'react-native'
 import React from 'react'
 import { FIREBASE_AUTH } from '../../../FirebaseConfig'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
 import { useNavigation } from '@react-navigation/native';
-import { Center, Heading } from 'native-base';
-
+import { Heading } from 'native-base';
+import { styles } from '../stylesScreen';
 const Login = () => {
 
   const [email, setEmail] = React.useState('')
@@ -42,7 +42,7 @@ const Login = () => {
   }
 
   return (
-      <View style={styles.container}>
+      <View style={styles.containerLogin}>
         <Heading size="lg" fontWeight="600" color="coolGray.800" _dark={{
           color: "warmGray.50"
         }}>
@@ -82,22 +82,3 @@ const Login = () => {
   )
 }
 export default Login
-
-const styles = StyleSheet.create(
-  {
-    container: {
-      flex: 1,
-      marginHorizontal: 20,
-      justifyContent: 'center',
-    },
-    input: {
-      marginVertical: 4,
-      height: 50,
-      borderWidth: 1,
-      borderRadius: 5,
-      padding: 10,
-      borderColor: '#ccc',
-      backgroundColor: '#F4EDE3',
-    },
-  }
-);

@@ -1,9 +1,6 @@
 import { View, Text } from "react-native";
 import { styles } from "./styles";
 import Ionicons from '@expo/vector-icons/Ionicons';
-import TextInputExample from "./textInput";
-import { Gupter_400Regular, Gupter_500Medium } from '@expo-google-fonts/gupter';
-import SvgComponent from "./SvgComponent";
 import React from "react";
 export default function Toolbar() {
     return (

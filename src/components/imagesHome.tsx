@@ -1,8 +1,6 @@
-import { Text, View, Image, ImageBackground } from 'react-native';
+import { Text, View, ImageBackground } from 'react-native';
 import { styles } from './styles'
 import { LinearGradient } from 'expo-linear-gradient';
-import { Gupter_400Regular, Gupter_500Medium } from '@expo-google-fonts/gupter';
-//json com as comidas
 import { listaDeComidas } from '../screens/home';
 import React from 'react';
 
