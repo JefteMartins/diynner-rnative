@@ -25,6 +25,10 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#25292e"
     }
   }
 }

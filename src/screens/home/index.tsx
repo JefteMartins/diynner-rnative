@@ -11,7 +11,6 @@ export default function Home({ navigation }: any) {
       <StatusBar style="auto" />
 
       <Toolbar />
-      {/* componente dos cards */}
       <ImagesHomeTouchable />
     </View>
   );

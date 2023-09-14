@@ -20,7 +20,6 @@ export default function Toolbar() {
                 <Ionicons name="md-person-outline" size={24} color="black" />
             </View>
         </View>
-        <TextInputExample />
         </>
     );
 }
