@@ -1,7 +1,6 @@
 import Home from './src/screens/home';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import ImagesHome from './src/components/imagesHome';
 import RecipeDetails from './src/screens/home/recipeDetails';
 import React, { useEffect, useState } from 'react';
 import Login from './src/screens/home/login';
@@ -18,7 +17,6 @@ function loggedStack() {
 
     <insideStack.Navigator>
       <insideStack.Screen name="Home" component={Home} />
-      <insideStack.Screen name="ImagesHome" component={ImagesHome} />
       <insideStack.Screen name="Detalhes da compra" component={RecipeDetails} />
       <insideStack.Screen name="Pagamento" component={cart} />
     </insideStack.Navigator>

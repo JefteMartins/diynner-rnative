@@ -3,7 +3,7 @@ export const listaDeComidasFull = [
       
         id: 1,
         nome: "Arroz à grega",
-        image: "https://img.itdg.com.br/tdg/images/recipes/000/088/750/352590/352590_original.jpg?w=1200",
+        image: "https://cozinhaemsegundos.com.br/images/receitas/900_receita-de-arroz-a-grega.jpeg",
         preparation:[
           {
             step:1,
@@ -140,7 +140,7 @@ export const listaDeComidasFull = [
           
         id: 2,
         nome: "Pudim",
-        image: "https://img.itdg.com.br/tdg/images/recipes/000/031/593/318825/318825_original.jpg",
+        image: "https://static.itdg.com.br/images/1200-675/59e079217cc8af8291a8cb910d1d449f/318825-original.jpg",
         preparation:[
           {
             step:1,
@@ -414,7 +414,7 @@ export const listaDeComidasFull = [
           
         id: 4,
         nome: "Feijão tropeiro",
-        image: "https://img.itdg.com.br/tdg/images/recipes/000/000/961/327806/327806_original.jpg",
+        image: "https://www.receitasnestle.com.br/sites/default/files/srh_recipes/80d5d91b377b35da2338d66e35ba21ee.jpg",
         preparation:[
           {
             step:1,
