@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react';
 import Login from './src/screens/home/login';
 import { User, onAuthStateChanged } from 'firebase/auth';
 import { FIREBASE_AUTH } from './FirebaseConfig';
-import { NativeBaseProvider, Box, extendTheme } from 'native-base';
+import { NativeBaseProvider } from 'native-base';
 import cart from './src/screens/home/cart';
 
 const Stack = createStackNavigator();
@@ -16,11 +16,7 @@ const insideStack = createStackNavigator();
 function loggedStack() {
   return (
 
-    <insideStack.Navigator screenOptions={{
-      cardStyle: {
-        backgroundColor: '#000000',
-      }
-    }}>
+    <insideStack.Navigator>
       <insideStack.Screen name="Home" component={Home} />
       <insideStack.Screen name="ImagesHome" component={ImagesHome} />
       <insideStack.Screen name="RecipeDetails" component={RecipeDetails} />
@@ -43,9 +39,7 @@ export default function App() {
         <Stack.Navigator
           initialRouteName='Login'
           screenOptions={{
-            cardStyle: {
-              backgroundColor: '#EDF0EB',
-            }, headerShown: false
+            headerShown: false
           }}
         >
           {user ?

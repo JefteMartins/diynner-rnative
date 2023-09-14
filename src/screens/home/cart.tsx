@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Box, Card, Divider, VStack } from 'native-base';
+import { Box, Button, Card, Divider, VStack } from 'native-base';
 
 const PaymentScreen = (props: any) => {
     const navigation = useNavigation();
@@ -37,11 +37,17 @@ const PaymentScreen = (props: any) => {
                         </Text>
                     </Box>
                     <Box px="4" pb="4">
-                    <Text style={styles.price}>Valor: R$ {valor}</Text>
+                        <Text style={styles.price}>Valor: R$ {valor}</Text>
                     </Box>
                 </VStack>
             </Card>
-            <Button title="Confirmar Compra" onPress={handlePayment} />
+            <Button
+                style={{ justifyContent: 'center', alignItems: 'center' }}
+                borderRadius="full" colorScheme="success"
+                onTouchEnd={() => handlePayment()}
+            >
+                Comprar
+            </Button>
         </View>
     );
 };
@@ -50,9 +56,9 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 20,
-        justifyContent: 'center',
-        alignItems: 'center',
         backgroundColor: '#EDF0EB',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
     },
     title: {
         fontSize: 20,
