@@ -10,7 +10,7 @@ export default function ImagesTouchableHome() {
   const navigation = useNavigation();
   const [text, onChangeText] = React.useState('');
   const handlePress = (foodData: Object) => {
-    navigation.navigate('RecipeDetails', foodData);
+    navigation.navigate('Detalhes da compra', foodData);
   };
 
   return (

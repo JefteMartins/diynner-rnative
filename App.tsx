@@ -19,8 +19,8 @@ function loggedStack() {
     <insideStack.Navigator>
       <insideStack.Screen name="Home" component={Home} />
       <insideStack.Screen name="ImagesHome" component={ImagesHome} />
-      <insideStack.Screen name="RecipeDetails" component={RecipeDetails} />
-      <insideStack.Screen name="Cart" component={cart} />
+      <insideStack.Screen name="Detalhes da compra" component={RecipeDetails} />
+      <insideStack.Screen name="Pagamento" component={cart} />
     </insideStack.Navigator>
   )
 }
@@ -29,7 +29,6 @@ export default function App() {
   const [user, setUser] = useState<User | null>(null);
   useEffect(() => {
     onAuthStateChanged(FIREBASE_AUTH, (user) => {
-      console.log('user:', user?.email)
       setUser(user)
     })
   }, [])

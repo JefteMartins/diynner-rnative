@@ -1,9 +1,10 @@
 import { View, Text, Image } from 'react-native';
 import { styles } from '../../components/styles';
 import React from 'react';
-import { Button, Divider, Icon } from 'native-base';
+import { Divider, Fab, Icon } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
-import PassoAPasso from '../../components/todoListExample';
+import PassoAPasso from '../../components/todoList';
+import { AntDesign } from "@expo/vector-icons";
 
 export default function RecipeDetails(props: any) {
   const foodDetailsData = props.route.params;
@@ -11,7 +12,7 @@ export default function RecipeDetails(props: any) {
   const preparation = foodDetailsData.preparation;
   const navigation = useNavigation();
   const handlePress = (foodData: Object) => {
-    navigation.navigate('Cart', foodData);
+    navigation.navigate('Pagamento', foodData);
   };
   let listaDePassos: any[] = [];
   return (
@@ -33,12 +34,17 @@ export default function RecipeDetails(props: any) {
         })
         }
         <PassoAPasso test={listaDePassos} ></PassoAPasso>
-        <Button
-        borderRadius="full" colorScheme="success"
-        onTouchEnd={() => handlePress(foodDetailsData)}
-        >
-          Comprar
-        </Button>
+        <Fab
+          renderInPortal={false}
+          shadow={2}
+          size="sm"
+          icon={
+          <Icon color="white"
+          as={AntDesign} name="shoppingcart"
+          size="4"
+          onTouchEnd={() => handlePress(foodDetailsData)}
+          />
+          } />
       </View>
     </View>
   );

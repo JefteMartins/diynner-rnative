@@ -19,7 +19,6 @@ const Login = () => {
     setLoading(true)
     try {
       const response = await signInWithEmailAndPassword(auth, email, password)
-      console.log(response)
       alert('Logado com sucesso!')
       navigation.navigate('Home', response.user)
     } catch (e: any) {
@@ -33,7 +32,6 @@ const Login = () => {
     setLoading(true)
     try {
       const response = await createUserWithEmailAndPassword(auth, email, password)
-      console.log(response)
       alert('Cadastrado com sucesso!')
     } catch (e: any) {
       console.log(e)

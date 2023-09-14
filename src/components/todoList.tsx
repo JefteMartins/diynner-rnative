@@ -8,8 +8,6 @@ export default function PassoAPasso(props: any) {
         isCompleted: false
     }];
     instState.push(...props.test)
-    console.log('props=>', props)
-    console.log('instState=>', instState)
     const [list, setList] = React.useState(instState);
 
 
