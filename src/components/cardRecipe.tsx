@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Heading, AspectRatio, Image, Text, Center, HStack, Stack, NativeBaseProvider } from "native-base";
 
 const CardRecipe = (props: any) => {
-    console.log('>>', props.data.route.params);
     const currentPageData = props.data.route.params;
     let valor = 0;
     currentPageData.recipe.forEach((element: { value: any; }) => {

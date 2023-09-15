@@ -22,7 +22,7 @@ const PaymentScreen = (props: any) => {
             <CardRecipe data={props} />
             <Button
                 style={{ justifyContent: 'center', alignItems: 'center' }}
-                borderRadius="full" colorScheme="success"
+                borderRadius="full"
                 onTouchEnd={() => handlePayment()}
             >
                 Comprar
