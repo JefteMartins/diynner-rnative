@@ -8,17 +8,19 @@ import { User, onAuthStateChanged } from 'firebase/auth';
 import { FIREBASE_AUTH } from './FirebaseConfig';
 import { NativeBaseProvider } from 'native-base';
 import cart from './src/screens/home/cart';
+import Historico from './src/screens/home/historico';
 
 const Stack = createStackNavigator();
 const insideStack = createStackNavigator();
 
-function loggedStack() {
+function LoggedStack() {
   return (
 
     <insideStack.Navigator>
       <insideStack.Screen name="Home" component={Home} />
       <insideStack.Screen name="Detalhes da compra" component={RecipeDetails} />
       <insideStack.Screen name="Pagamento" component={cart} />
+      <insideStack.Screen name="Histórico de compras" component={Historico} />
     </insideStack.Navigator>
   )
 }
@@ -40,7 +42,7 @@ export default function App() {
           }}
         >
           {user ?
-            <Stack.Screen name="Home" component={loggedStack} />
+            <Stack.Screen name="Home" component={LoggedStack} />
             :
             <Stack.Screen name="Login" component={Login} />
           }
