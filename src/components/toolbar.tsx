@@ -8,11 +8,6 @@ import { FIREBASE_AUTH, FIREBASE_DB } from "../../FirebaseConfig";
 import { AntDesign } from '@expo/vector-icons';
 export default function Toolbar() {
     const navigation = useNavigation();
-    const goToHistorico = () => {
-        console.log('historico')
-        navigation.navigate('Histórico de compras', compras)
-    }
-
 
     const userEmail = FIREBASE_AUTH.currentUser?.email;
     let compras: object[] = [];
@@ -26,9 +21,13 @@ export default function Toolbar() {
                 key: documentSnapshot.id,
             });
         });
-        console.log(`historico de compras usuário ${userEmail}: `, JSON.stringify(compras, null, 2));
         setCarregaHistorico(true);
     });
+
+    const goToHistorico = () => {
+        console.log('historico')
+        navigation.navigate('Histórico de compras', compras)
+    }
 
     return (
         <>

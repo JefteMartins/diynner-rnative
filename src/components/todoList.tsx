@@ -1,4 +1,4 @@
-import { Box, Center, Checkbox, HStack, Heading, Icon, IconButton, Input, VStack, useToast, Text } from "native-base";
+import { Box, Center, Checkbox, HStack, Heading, VStack, Text } from "native-base";
 import React from "react";
 
 export default function PassoAPasso(props: any) {

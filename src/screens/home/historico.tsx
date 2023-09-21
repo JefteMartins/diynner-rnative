@@ -6,9 +6,8 @@ import { listaDeComidasFull } from '../../assets/listaDeComidasFull';
 
 
 const Historico = (props: any) => {
-    console.log('props', props)
+    
     const historico = props.route.params;
-    console.log('historico', historico)
 
     return (
         <VStack space={2} justifyContent="center" >

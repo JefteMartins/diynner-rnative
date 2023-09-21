@@ -38,6 +38,7 @@ export default function RecipeDetails(props: any) {
           renderInPortal={false}
           shadow={2}
           size="sm"
+          position={'fixed'}
           icon={
             <Icon color="white"
               as={AntDesign} name="shoppingcart"

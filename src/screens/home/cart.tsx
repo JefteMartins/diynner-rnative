@@ -4,17 +4,17 @@ import { useNavigation } from '@react-navigation/native';
 import { Button } from 'native-base';
 import CardRecipe from '../../components/cardRecipe';
 import { styles } from '../stylesScreen';
-import { addDoc, collection, onSnapshot } from 'firebase/firestore';
+import { addDoc, collection } from 'firebase/firestore';
 import { FIREBASE_AUTH, FIREBASE_DB } from '../../../FirebaseConfig';
 import moment from 'moment';
 
 const PaymentScreen = (props: any) => {
     moment.locale('pt-br');
+    const horaDaCompra = moment().format('LLL');
     const navigation = useNavigation();
     const foodDetailsData = props.route.params;
     const foodIngredientsData = foodDetailsData.recipe;
     const userEmail = FIREBASE_AUTH.currentUser?.email;
-    const horaDaCompra = moment().format('LLL');
     let valor = 0;
     foodIngredientsData.forEach((element: { value: any; }) => {
         valor += element.value;
