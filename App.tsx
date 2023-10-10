@@ -42,7 +42,7 @@ export default function App() {
           }}
         >
           {user ?
-            <Stack.Screen name="Home" component={LoggedStack} />
+            <Stack.Screen name="LoggedHome" component={LoggedStack} />
             :
             <Stack.Screen name="Login" component={Login} />
           }

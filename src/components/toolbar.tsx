@@ -14,7 +14,6 @@ export default function Toolbar() {
     const [carregaHistorico, setCarregaHistorico] = React.useState(false);
     const subscriber = onSnapshot(collection(FIREBASE_DB, `${userEmail}`), (querySnapshot) => {
         compras = [];
-        console.log("entrou no sub")
         querySnapshot.forEach((documentSnapshot) => {
             compras.push({
                 ...documentSnapshot.data(),
@@ -25,7 +24,6 @@ export default function Toolbar() {
     });
 
     const goToHistorico = () => {
-        console.log('historico')
         navigation.navigate('Histórico de compras', compras)
     }
 

@@ -4,7 +4,7 @@ import { styles } from '../../components/styles';
 import Toolbar from '../../components/toolbar';
 import ImagesHomeTouchable from '../../components/imagesHomeTouchable';
 import React from 'react';
-import { Fab, Icon } from 'native-base';
+import { Divider, Fab, Icon } from 'native-base';
 import { Ionicons } from '@expo/vector-icons'; 
 import { FIREBASE_AUTH } from '../../../FirebaseConfig';
 
@@ -13,6 +13,7 @@ export default function Home({ navigation }: any) {
     <View style={styles.container} >
       <StatusBar style="auto" />
       <Toolbar />
+      <Divider my="2" />
       <ImagesHomeTouchable />
       <Fab
           renderInPortal={false}

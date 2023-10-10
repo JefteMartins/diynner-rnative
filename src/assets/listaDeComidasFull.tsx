@@ -3,7 +3,7 @@ export const listaDeComidasFull = [
       
         id: 1,
         nome: "Arroz à grega",
-        image: "https://cozinhaemsegundos.com.br/images/receitas/900_receita-de-arroz-a-grega.jpeg",
+        image: "https://www.receiteria.com.br/wp-content/uploads/arroz-a-grega-tradicional-rotated.jpeg",
         preparation:[
           {
             step:1,

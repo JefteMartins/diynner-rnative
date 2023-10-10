@@ -4,6 +4,7 @@ import { styles } from './styles';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from '@react-navigation/native';
 import { listaDeComidasFull } from '../assets/listaDeComidasFull';
+import { ScrollView } from 'native-base';
 
 export default function ImagesTouchableHome() {
 
@@ -14,38 +15,40 @@ export default function ImagesTouchableHome() {
   };
 
   return (
-    <View >
-      <SafeAreaView>
-        <TextInput
-          style={styles.input}
-          onChangeText={onChangeText}
-          placeholder='Pesquisa por uma receita aí...'
-          value={text}
-        />
-      </SafeAreaView>
-      <View style={styles.homeGrid}>
-        {listaDeComidasFull.filter(
-          x => x.nome.toLowerCase().includes(text.toLowerCase())
-        ).map((comida, index) => {
-          return (
-            <TouchableOpacity key={index} onPress={() => handlePress(comida)} >
-              <ImageBackground
-                source={{ uri: comida.image }}
-                style={styles.imageStyle}
-                imageStyle={styles.imageBorderRadius}
-              >
-                <LinearGradient
-                  colors={['transparent', 'rgba(0,0,0,0.1)', 'rgba(0,0,0,0.8)']}
-                  style={styles.linearGradient}
+    <ScrollView>
+      <View >
+        <SafeAreaView>
+          <TextInput
+            style={styles.input}
+            onChangeText={onChangeText}
+            placeholder='Pesquisa por uma receita aí...'
+            value={text}
+          />
+        </SafeAreaView>
+        <View style={styles.homeGrid}>
+          {listaDeComidasFull.filter(
+            x => x.nome.toLowerCase().includes(text.toLowerCase())
+          ).map((comida, index) => {
+            return (
+              <TouchableOpacity key={index} onPress={() => handlePress(comida)} >
+                <ImageBackground
+                  source={{ uri: comida.image }}
+                  style={styles.imageStyle}
+                  imageStyle={styles.imageBorderRadius}
+                  alt='Imagem de comida'
                 >
-                  <Text style={styles.textStyle}>{comida.nome}</Text>
-                </LinearGradient>
-              </ImageBackground>
-            </TouchableOpacity>
-          );
-        })}
-
+                  <LinearGradient
+                    colors={['transparent', 'rgba(0,0,0,0.1)', 'rgba(0,0,0,0.8)']}
+                    style={styles.linearGradient}
+                  >
+                    <Text style={styles.textStyle}>{comida.nome}</Text>
+                  </LinearGradient>
+                </ImageBackground>
+              </TouchableOpacity>
+            );
+          })}
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }

@@ -58,7 +58,7 @@ export const styles = StyleSheet.create({
   diynnerTitle: {
     fontSize: 20,
     fontWeight: "700",
-  },
+      },
   horizontalRule: {
     margin: 10,
     width: "100%",
